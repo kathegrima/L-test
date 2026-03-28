@@ -33,7 +33,7 @@
   <meta name="twitter:description" content="Il cuscino intelligente che rileva la tua postura e ti riporta in posizione, in silenzio." />
   <meta name="twitter:image"       content="https://www.leantil.com/og-image.png" />
 
-  <!-- ══ STRUCTURED DATA JSON-LD (GEO: Google AI Overview, Perplexity, ChatGPT) ══ -->
+  <!-- ══ STRUCTURED DATA JSON-LD ══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -93,6 +93,11 @@
             "@type": "Question",
             "name": "Devo cambiare tutta la mia postazione?",
             "acceptedAnswer": { "@type": "Answer", "text": "No. LeanTil si adatta a qualsiasi sedia e non richiede modifiche alla postazione." }
+          },
+          {
+            "@type": "Question",
+            "name": "Come viene alimentato LeanTil?",
+            "acceptedAnswer": { "@type": "Answer", "text": "LeanTil ha una batteria ricaricabile integrata. I dettagli sull'autonomia verranno comunicati ai beta tester durante il programma." }
           }
         ]
       }
@@ -117,7 +122,6 @@
     gtag('config', 'G-S1WJG24H9T', {
       anonymize_ip: true,
       send_page_view: true
-      /* Nota: in GA4 > Admin > Events, marca "cta_click" come Conversione */
     });
   </script>
 
@@ -159,10 +163,6 @@
     @keyframes blink {
       0%,100% { opacity:1; transform:scale(1); }
       50%     { opacity:.2; transform:scale(1.55); }
-    }
-    @keyframes slideUp {
-      from { opacity:0; transform:translateY(32px); }
-      to   { opacity:1; transform:translateY(0); }
     }
 
     /* ── COOKIE BANNER ── */
@@ -270,6 +270,20 @@
     .proof-text { font-size:13px; color:var(--muted); }
     .proof-text strong { color:var(--p2); font-weight:700; }
 
+    /* ── FOR WHO STRIP ── */
+    .forwho-strip { padding:0 0 48px; }
+    .forwho-chips {
+      display:flex; justify-content:center; gap:10px; flex-wrap:wrap;
+    }
+    .forwho-chip {
+      display:inline-flex; align-items:center; gap:7px;
+      background:var(--card); border:1px solid var(--bd2);
+      border-radius:100px; padding:8px 18px;
+      font-size:13.5px; font-weight:600; color:var(--muted);
+      transition:border-color .2s, color .2s;
+    }
+    .forwho-chip:hover { border-color:var(--p2); color:var(--tx); }
+
     /* ── PROBLEM ── */
     .problem { padding:110px 0 80px; }
     .prob-big {
@@ -345,7 +359,6 @@
       background:var(--card); border:1px solid var(--bd); border-radius:16px;
       padding:24px 28px; display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap;
     }
-    /* Due founder side by side */
     .founders-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
     .founder-card-single {
       background:var(--card); border:1px solid var(--bd); border-radius:16px;
@@ -443,6 +456,7 @@
       .illus-steps { gap:6px; }
       .illus-pill { font-size:11px; padding:4px 10px; }
       .founder-card-single { padding:20px; }
+      .forwho-chip { font-size:12.5px; padding:7px 14px; }
     }
     @media (prefers-reduced-motion:reduce) {
       *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; }
@@ -460,13 +474,13 @@
   </div>
 </div>
 
-<!-- EXIT INTENT OVERLAY (sempre nel DOM, visibile via classe) -->
+<!-- EXIT INTENT OVERLAY -->
 <div id="exit-overlay" role="dialog" aria-modal="true" aria-labelledby="exit-title">
   <div class="exit-modal">
     <button class="exit-close" id="exit-x" aria-label="Chiudi">&#215;</button>
     <div class="exit-icon" aria-hidden="true">&#127919;</div>
     <h3 id="exit-title" data-k="exit_h">Aspetta &mdash; rimani aggiornato</h3>
-    <p data-k="exit_p">Non siamo ancora pronti per tutti. Lascia la mail e ti avvisiamo al lancio. Zero spam.</p>
+    <p data-k="exit_p">La beta si chiude presto. Lascia la mail e ti avvisiamo prima degli altri. Zero spam.</p>
     <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener" class="btn-lg" id="exit-cta" data-k="exit_cta">Avvisami al lancio &#8594;</a>
     <button class="exit-skip" id="exit-skip" data-k="exit_skip">No grazie, continuo a guardare</button>
   </div>
@@ -493,7 +507,7 @@
       <span data-k="badge">Beta privata &nbsp;&middot;&nbsp; Posti limitati</span>
     </div>
     <h1 data-k="h1">La tua schiena ti ringrazia alle 18:00</h1>
-    <p class="hero-sub" data-k="sub">LeanTil sente quando ti incurvi e ti riporta in posizione, in silenzio, senza interrompere il tuo lavoro.</p>
+    <p class="hero-sub" data-k="sub">LeanTil ti tiene in posizione tutto il giorno, senza che tu debba pensarci.</p>
     <div class="cta-group">
       <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener" class="btn-lg" id="hero-cta" data-k="hero_cta">Inizia ora &#8212; &egrave; gratuito</a>
       <span class="micro" data-k="micro">Gratuito per i beta tester. 3 domande, 2 minuti.</span>
@@ -508,6 +522,18 @@
     </div>
   </div>
 </section>
+
+<!-- FOR WHO STRIP -->
+<div class="forwho-strip rv">
+  <div class="W">
+    <div class="forwho-chips">
+      <span class="forwho-chip" data-k="fw1">💻 Developer &amp; designer</span>
+      <span class="forwho-chip" data-k="fw2">✍️ Freelance &amp; remote worker</span>
+      <span class="forwho-chip" data-k="fw3">🏢 Chi lavora 6+ ore alla scrivania</span>
+      <span class="forwho-chip" data-k="fw4">🎮 Gamer e creator</span>
+    </div>
+  </div>
+</div>
 
 <!-- PROBLEM + BENEFIT CARDS -->
 <section class="problem">
@@ -581,7 +607,7 @@
       <div class="step">
         <div class="step-n" aria-hidden="true">02</div>
         <h3 data-k="s2h">Rileva la postura</h3>
-        <p data-k="s2b">I sensori monitorano l&rsquo;allineamento della colonna in tempo reale.</p>
+        <p data-k="s2b">La piattaforma raccoglie i tuoi dati di postura in tempo reale e traccia i progressi nel tempo. Settimana dopo settimana, vedi se stai davvero migliorando.</p>
       </div>
       <div class="step">
         <div class="step-n" aria-hidden="true">03</div>
@@ -611,14 +637,18 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
           <span data-k="p3">Accesso prioritario al lancio</span>
         </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span data-k="p4">Pensato per chi lavora 6+ ore al giorno alla scrivania</span>
+        </li>
       </ul>
       <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener" class="btn-lg" data-k="jcta">Riserva il tuo posto &#8594;</a>
-      <p class="join-note" data-k="join_note">3 domande, 2 minuti. Ti risponderemo entro 48h.</p>
+      <p class="join-note" data-k="join_note">Gratuito per i beta tester &mdash; 3 domande, 2 minuti. Ti risponderemo entro 48h.</p>
     </div>
   </div>
 </section>
 
-<!-- FOUNDER STRIP — UN SOLO FOUNDER ATTIVO -->
+<!-- FOUNDER STRIP -->
 <section class="founder-strip rv">
   <div class="W">
     <div class="founder-inner">
@@ -627,7 +657,7 @@
       </div>
       <div class="founder-text">
         <strong data-k="founder_strong">Lockdown davanti a uno schermo.</strong>
-        <p data-k="founder_p">LeanTil nasce nel pieno del COVID-19, quando ore infinite davanti allo schermo e zero movimento sono diventati la norma. Risultato? Schiena a pezzi. Quello &egrave; stato per me un problema da risolvere. Se vuoi confrontarti, <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">scrivimi su LinkedIn</a>.</p>
+        <p data-k="founder_p">LeanTil nasce nel pieno del COVID-19, quando ore infinite davanti allo schermo e zero movimento sono diventati la norma. Risultato? Schiena a pezzi. Quello &egrave; stato per me un problema da risolvere. Se lo senti tuo anche tu, <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener">riserva un posto nella beta</a> &mdash; e teniamoci in contatto su <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">LinkedIn</a>.</p>
       </div>
     </div>
   </div>
@@ -636,61 +666,32 @@
 <!--
 ════════════════════════════════════════════════════════════
 SEZIONE DUE CO-FOUNDER — decommentare quando pronti
-Sostituire:
-  • "C" e "X" con le iniziali di entrambi (o tag <img> 44×44)
-  • founder_strong_1 / founder_p_1  → copy del primo founder (già popolato sopra)
-  • founder_strong_2 / founder_p_2  → copy del secondo founder
-  • Aggiungere i testi nel copy object IT e EN qui sotto
-  • Il layout .founders-grid divide la sezione in due colonne (1 col su mobile)
 ════════════════════════════════════════════════════════════
 
 <section class="founder-strip rv">
   <div class="W">
     <div class="founders-grid">
-
       <div class="founder-card-single">
         <div class="founder-avatar" style="padding:0;overflow:hidden;">
           <img src="foto-caterina.jpeg" alt="Caterina" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
         </div>
         <div class="founder-text">
           <strong data-k="founder_strong_1">Lockdown davanti a uno schermo.</strong>
-          <p data-k="founder_p_1">LeanTil nasce nel pieno del COVID-19, quando ore infinite davanti allo schermo e zero
-          movimento sono diventati la norma. Risultato? Schiena a pezzi. Quello è stato per me
-          un problema da risolvere. Se vuoi confrontarti,
-          <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">scrivimi su LinkedIn</a>.</p>
+          <p data-k="founder_p_1">...</p>
         </div>
       </div>
-
       <div class="founder-card-single">
         <div class="founder-avatar" style="padding:0;overflow:hidden;">
           <img src="foto-giuseppe.jpg" alt="Giuseppe" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
         </div>
         <div class="founder-text">
-          <strong data-k="founder_strong_2">Inserire headline del secondo co-founder.</strong>
-          <p data-k="founder_p_2">Inserire la storia personale del secondo co-founder — perché LeanTil, cosa
-          porta al progetto, un tocco umano autentico. Se vuoi confrontarti,
-          <a href="https://www.linkedin.com/in/PROFILO-SECONDO-FOUNDER/" target="_blank" rel="noopener">scrivimi su LinkedIn</a>.</p>
+          <strong data-k="founder_strong_2">Headline secondo co-founder.</strong>
+          <p data-k="founder_p_2">...</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
-Copy da aggiungere nell'oggetto IT e EN del JS quando si attiva la sezione:
-
-IT:
-  founder_strong_1: 'Lockdown davanti a uno schermo.',
-  founder_p_1: 'LeanTil nasce nel pieno del COVID-19 ... <a href="...">scrivimi su LinkedIn</a>.',
-  founder_strong_2: 'Headline secondo founder IT.',
-  founder_p_2: 'Testo secondo founder IT ... <a href="...">scrivimi su LinkedIn</a>.',
-
-EN:
-  founder_strong_1: 'Lockdown in front of a screen.',
-  founder_p_1: 'LeanTil was born in the middle of COVID-19 ... <a href="...">reach out on LinkedIn</a>.',
-  founder_strong_2: 'Second founder headline EN.',
-  founder_p_2: 'Second founder text EN ... <a href="...">reach out on LinkedIn</a>.',
-
 -->
 
 <!-- FAQ -->
@@ -739,6 +740,16 @@ EN:
         </div>
       </div>
 
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          <span data-k="q5">Come viene alimentato LeanTil?</span>
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-body" role="region">
+          <p data-k="a5">LeanTil ha una batteria ricaricabile integrata. I dettagli sull&rsquo;autonomia verranno comunicati ai beta tester durante il programma.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -774,10 +785,14 @@ var C = {
     hcta:'Entra nella beta \u2192',
     badge:'Beta privata \u00a0\u00b7\u00a0 Posti limitati',
     h1:'La tua schiena ti ringrazia alle 18:00',
-    sub:'LeanTil sente quando ti incurvi e ti riporta in posizione, in silenzio, senza interrompere il tuo lavoro.',
+    sub:'LeanTil ti tiene in posizione tutto il giorno, senza che tu debba pensarci.',
     hero_cta:'Inizia ora \u2014 \u00e8 gratuito',
     micro:'Gratuito per i beta tester. 3 domande, 2 minuti.',
     proof_txt:'persone gi\u00e0 in lista beta',
+    fw1:'💻 Developer &amp; designer',
+    fw2:'✍️ Freelance &amp; remote worker',
+    fw3:'🏢 Chi lavora 6+ ore alla scrivania',
+    fw4:'🎮 Gamer e creator',
     illus_label:'Come LeanTil percepisce la postura',
     pill1:'Rileva l\u2019incurvamento', pill2:'Segnale risale la colonna', pill3:'Torni in posizione',
     pa:'8 ore seduto al giorno:',
@@ -787,22 +802,26 @@ var C = {
     b3t:'Abitudini durature', b3b:'LeanTil allena il tuo corpo a riconoscere la posizione corretta in modo naturale, col tempo.',
     how_h:'Come funziona', how_s:'Tre passi. Zero complessit\u00e0.',
     s1h:'Ti siedi normalmente', s1b:'Posiziona LeanTil sulla tua sedia. Non serve nessuna configurazione.',
-    s2h:'Rileva la postura', s2b:'I sensori monitorano l\u2019allineamento della colonna in tempo reale.',
+    s2h:'Rileva la postura', s2b:'La piattaforma raccoglie i tuoi dati di postura in tempo reale e traccia i progressi nel tempo. Settimana dopo settimana, vedi se stai davvero migliorando.',
     s3h:'Feedback visivo', s3b:'Un segnale visivo discreto ti ricorda di tornare in posizione, senza distrarti.',
     jh:'Unisciti alla beta.', js:'Influenza il prodotto.',
-    p1:'Sei tra i primi a provarlo', p2:'Influenzi design e funzionalit\u00e0', p3:'Accesso prioritario al lancio',
+    p1:'Sei tra i primi a provarlo',
+    p2:'Influenzi design e funzionalit\u00e0',
+    p3:'Accesso prioritario al lancio',
+    p4:'Pensato per chi lavora 6+ ore al giorno alla scrivania',
     jcta:'Riserva il tuo posto \u2192',
-    join_note:'3 domande, 2 minuti. Ti risponderemo entro 48h.',
+    join_note:'Gratuito per i beta tester \u2014 3 domande, 2 minuti. Ti risponderemo entro 48h.',
     founder_strong:'Lockdown davanti a uno schermo.',
-    founder_p:'LeanTil nasce nel pieno del COVID-19, quando ore infinite davanti allo schermo e zero movimento sono diventati la norma. Risultato? Schiena a pezzi. Quello \u00e8 stato per me un problema da risolvere. Se vuoi confrontarti, <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">scrivimi su LinkedIn</a>.',
+    founder_p:'LeanTil nasce nel pieno del COVID-19, quando ore infinite davanti allo schermo e zero movimento sono diventati la norma. Risultato? Schiena a pezzi. Quello \u00e8 stato per me un problema da risolvere. Se lo senti tuo anche tu, <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener">riserva un posto nella beta</a> \u2014 e teniamoci in contatto su <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">LinkedIn</a>.',
     fq:'Domande frequenti',
     q1:'Quando sar\u00e0 disponibile LeanTil?', a1:'LeanTil \u00e8 in fase di beta testing con un primo gruppo di early adopter. Se vuoi partecipare, iscriviti tramite il form e ti contatteremo direttamente.',
     q2:'Come posso partecipare alla beta?', a2:'Clicca su \u201cRiserva il tuo posto\u201d e compila il form. Ti contatteremo direttamente con tutte le istruzioni entro 48 ore.',
     q3:'Devo cambiare tutta la mia postazione?', a3:'No. LeanTil si integra facilmente nella tua routine alla scrivania, senza stravolgere il modo in cui lavori.',
     q4:'Come funziona LeanTil?', a4:'LeanTil \u00e8 un cuscino che si adatta a qualsiasi sedia. Rileva in tempo reale come distribuisci il peso sulla seduta. Quando riconosce una postura scorretta prolungata, invia un segnale visivo discreto per ricordarti di tornare in posizione.',
+    q5:'Come viene alimentato LeanTil?', a5:'LeanTil ha una batteria ricaricabile integrata. I dettagli sull\u2019autonomia verranno comunicati ai beta tester durante il programma.',
     priv:'Privacy', lang:'EN', manage_cookies:'Gestisci cookie',
     exit_h:'Aspetta \u2014 rimani aggiornato',
-    exit_p:'Non siamo ancora pronti per tutti. Lascia la mail e ti avvisiamo al lancio. Zero spam.',
+    exit_p:'La beta si chiude presto. Lascia la mail e ti avvisiamo prima degli altri. Zero spam.',
     exit_cta:'Avvisami al lancio \u2192',
     exit_skip:'No grazie, continuo a guardare'
   },
@@ -812,10 +831,14 @@ var C = {
     hcta:'Join the beta \u2192',
     badge:'Private Beta \u00a0\u00b7\u00a0 Limited spots',
     h1:'Your back thanks you at 6 PM',
-    sub:'LeanTil senses when you slouch and brings you back, silently, without interrupting your work.',
+    sub:'LeanTil keeps you in position all day, without you having to think about it.',
     hero_cta:'Start now \u2014 it\'s free',
     micro:'Free for beta testers. 3 questions, 2 minutes.',
     proof_txt:'people already on the beta list',
+    fw1:'💻 Developers &amp; designers',
+    fw2:'✍️ Freelancers &amp; remote workers',
+    fw3:'🏢 Anyone working 6+ hours at a desk',
+    fw4:'🎮 Gamers &amp; creators',
     illus_label:'How LeanTil detects posture',
     pill1:'Detects the slouch', pill2:'Signal travels the spine', pill3:'You sit back up',
     pa:'8 hours sitting a day:',
@@ -825,22 +848,26 @@ var C = {
     b3t:'Lasting habits', b3b:'LeanTil trains your body to recognise the correct position naturally over time.',
     how_h:'How it works', how_s:'Three steps. Zero complexity.',
     s1h:'Sit normally', s1b:'Place LeanTil on your chair. No setup required.',
-    s2h:'Detects posture', s2b:'Sensors monitor your spinal alignment in real-time.',
+    s2h:'Detects posture', s2b:'The platform collects your posture data in real-time and tracks your progress over time. Week by week, you can see whether you\'re actually improving.',
     s3h:'Visual feedback', s3b:'A subtle visual signal reminds you to sit back up, without breaking your focus.',
     jh:'Join the beta.', js:'Shape the product.',
-    p1:'Be among the first to try it', p2:'Shape design and features', p3:'Priority launch access',
+    p1:'Be among the first to try it',
+    p2:'Shape design and features',
+    p3:'Priority launch access',
+    p4:'Made for people who spend 6+ hours a day at a desk',
     jcta:'Reserve your spot \u2192',
-    join_note:'3 questions, 2 minutes. We\'ll reply within 48h.',
+    join_note:'Free for beta testers \u2014 3 questions, 2 minutes. We\'ll reply within 48h.',
     founder_strong:'Lockdown in front of a screen.',
-    founder_p:'LeanTil was born in the middle of COVID-19, when endless hours at a desk and zero movement became the norm. The result? A wrecked back. That was a problem I had to solve. If you want to talk about it, <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">reach out on LinkedIn</a>.',
+    founder_p:'LeanTil was born in the middle of COVID-19, when endless hours at a desk and zero movement became the norm. The result? A wrecked back. That was a problem I had to solve. If you feel the same way, <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener">reserve a spot in the beta</a> \u2014 and let\u2019s stay in touch on <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">LinkedIn</a>.',
     fq:'Frequently asked questions',
     q1:'When will LeanTil be available?', a1:'LeanTil is currently in beta testing with a first group of early adopters. Sign up through the form and we\'ll contact you directly.',
     q2:'How can I join the beta?', a2:'Click \u201cReserve your spot\u201d and fill out the form. We\'ll reach out with all the details within 48 hours.',
     q3:'Do I need to change my entire workstation?', a3:'No. LeanTil fits seamlessly into your existing desk setup, without changing how you work.',
     q4:'How does LeanTil work?', a4:'LeanTil is a cushion that adapts to any chair. It detects in real-time how you distribute your weight on the seat. When it recognises prolonged poor posture, it sends a subtle visual signal to remind you to get back into position.',
+    q5:'How is LeanTil powered?', a5:'LeanTil has a built-in rechargeable battery. Autonomy details will be shared with beta testers during the programme.',
     priv:'Privacy', lang:'IT', manage_cookies:'Manage cookies',
     exit_h:'Wait \u2014 stay in the loop',
-    exit_p:'We\'re not ready for everyone yet. Drop your email and we\'ll let you know at launch. No spam.',
+    exit_p:'The beta is closing soon. Drop your email and we\'ll notify you before everyone else. No spam.',
     exit_cta:'Notify me at launch \u2192',
     exit_skip:'No thanks, I\'ll keep looking'
   }
@@ -893,7 +920,7 @@ function resetCookies() {
   gtag('event', 'cookie_reset', { event_category:'engagement' });
 }
 
-/* ══ GA4 — UTM tracking (campagne, referral) ══ */
+/* ══ GA4 — UTM tracking ══ */
 (function() {
   var params = new URLSearchParams(window.location.search);
   var utmData = {};
@@ -905,8 +932,7 @@ function resetCookies() {
   }
 })();
 
-/* ══ GA4 — CTA clicks (traccia sezione sorgente) ══ */
-/* AZIONE RICHIESTA IN GA4: Admin > Events > Mark as conversion: "cta_click" */
+/* ══ GA4 — CTA clicks ══ */
 document.querySelectorAll('a[href*="tally.so"]').forEach(function(el) {
   el.addEventListener('click', function() {
     var sec = this.closest('section');
@@ -920,7 +946,7 @@ document.querySelectorAll('a[href*="tally.so"]').forEach(function(el) {
   });
 });
 
-/* ══ GA4 — Tempo al primo click CTA (misura intenzione) ══ */
+/* ══ GA4 — Tempo al primo click CTA ══ */
 var heroStart = Date.now();
 var heroCta = document.getElementById('hero-cta');
 if (heroCta) {
@@ -932,9 +958,7 @@ if (heroCta) {
   }, { once:true });
 }
 
-/* ══ GA4 — Section views: funnel completo ══ */
-/* Leggi in GA4 > Explore > Funnel exploration:
-   section_problem → section_how → section_join → cta_click */
+/* ══ GA4 — Section views ══ */
 (function() {
   if (!('IntersectionObserver' in window)) return;
   var map = {
@@ -971,14 +995,14 @@ if (heroCta) {
   }, { passive:true });
 })();
 
-/* ══ GA4 — Time on page (engagement qualitativo) ══ */
+/* ══ GA4 — Time on page ══ */
 [30,60,120,300].forEach(function(s) {
   setTimeout(function() {
     gtag('event', 'time_on_page', { event_category:'engagement', seconds:s });
   }, s * 1000);
 });
 
-/* ══ GA4 — Outbound clicks (tutti i link esterni) ══ */
+/* ══ GA4 — Outbound clicks ══ */
 document.querySelectorAll('a[href^="http"]').forEach(function(el) {
   if (el.hostname === window.location.hostname) return;
   el.addEventListener('click', function() {
@@ -1002,7 +1026,7 @@ document.querySelectorAll('a[href^="mailto"]').forEach(function(el) {
   });
 });
 
-/* ══ GA4 — Card hover (interesse per beneficio specifico) ══ */
+/* ══ GA4 — Card hover ══ */
 document.querySelectorAll('.card').forEach(function(el) {
   var fired = false;
   el.addEventListener('mouseenter', function() {
@@ -1014,7 +1038,7 @@ document.querySelectorAll('.card').forEach(function(el) {
   });
 });
 
-/* ══ GA4 — FAQ open (capisce quali obiezioni sono più forti) ══ */
+/* ══ GA4 — FAQ open ══ */
 document.querySelectorAll('.faq-btn').forEach(function(btn) {
   btn.addEventListener('click', function() {
     var item = this.closest('.faq-item');
@@ -1030,9 +1054,6 @@ document.querySelectorAll('.faq-btn').forEach(function(btn) {
     if (!isOpen) { item.classList.add('open'); this.setAttribute('aria-expanded','true'); }
   });
 });
-
-/* ══ GA4 — Cookie consent rate ══ */
-/* Leggi in GA4 > Reports > Events: cookie_accept vs cookie_reject */
 
 /* ══ HEADER SHADOW ══ */
 window.addEventListener('scroll', function() {
@@ -1069,19 +1090,14 @@ if (sg && 'IntersectionObserver' in window) {
   document.querySelectorAll('.step').forEach(function(s) { s.classList.add('show'); });
 }
 
-/* ══ EXIT INTENT ══
-   Logica: mostra una volta per SESSIONE (sessionStorage, non localStorage)
-   così non sparisce per sempre dopo la prima visita.
-   Trigger multipli: mouseleave desktop + scroll-up mobile + inattività mobile.
-*/
+/* ══ EXIT INTENT ══ */
 (function() {
-  var overlay   = document.getElementById('exit-overlay');
-  var exitX     = document.getElementById('exit-x');
-  var exitSkip  = document.getElementById('exit-skip');
-  var exitCta   = document.getElementById('exit-cta');
-  var shown     = false;
+  var overlay  = document.getElementById('exit-overlay');
+  var exitX    = document.getElementById('exit-x');
+  var exitSkip = document.getElementById('exit-skip');
+  var exitCta  = document.getElementById('exit-cta');
+  var shown    = false;
 
-  /* Usa sessionStorage: si resetta a ogni nuova sessione del browser */
   try { if (sessionStorage.getItem('lt_exit')) shown = true; } catch(e) {}
 
   function showExit() {
@@ -1090,7 +1106,6 @@ if (sg && 'IntersectionObserver' in window) {
     try { sessionStorage.setItem('lt_exit','1'); } catch(e) {}
     gtag('event', 'exit_intent_shown', { event_category:'engagement', trigger_lang:curLang });
     overlay.classList.add('visible');
-    /* focus trap: sposta il focus sul close button */
     setTimeout(function() { exitX.focus(); }, 50);
   }
 
@@ -1105,22 +1120,20 @@ if (sg && 'IntersectionObserver' in window) {
     gtag('event', 'cta_click', { event_category:'conversion', cta_section:'exit_intent', language:curLang });
   });
 
-  /* Chiudi cliccando fuori dal modal */
   overlay.addEventListener('click', function(ev) {
     if (ev.target === overlay) closeExit('backdrop');
   });
 
-  /* Chiudi con Escape */
   document.addEventListener('keydown', function(ev) {
     if (ev.key === 'Escape' && overlay.classList.contains('visible')) closeExit('escape');
   });
 
-  /* ── TRIGGER 1: Desktop — mouseleave verso la tab bar ── */
+  /* TRIGGER 1: Desktop — mouseleave */
   document.addEventListener('mouseleave', function(e) {
     if (e.clientY <= 20) showExit();
   });
 
-  /* ── TRIGGER 2: Mobile — scroll-up rapido dopo 300px ── */
+  /* TRIGGER 2: Mobile — scroll-up rapido */
   var lastScrollY = window.scrollY;
   window.addEventListener('scroll', function() {
     var y = window.scrollY;
@@ -1128,7 +1141,7 @@ if (sg && 'IntersectionObserver' in window) {
     lastScrollY = y;
   }, { passive:true });
 
-  /* ── TRIGGER 3: Mobile — inattività 45s ── */
+  /* TRIGGER 3: Mobile — inattività 45s */
   var inTimer;
   function resetInactivity() {
     clearTimeout(inTimer);
