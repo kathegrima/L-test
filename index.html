@@ -199,7 +199,7 @@
       border-bottom:1px solid var(--bd); transition:box-shadow .3s;
     }
     .hdr-row { display:flex; align-items:center; justify-content:space-between; height:66px; }
-    .logo img { height:40px; }
+    .logo img { height:40px; width:auto;}
     .hdr-r { display:flex; align-items:center; gap:10px; }
     .btn-lang {
       padding:6px 14px; border-radius:8px; border:1px solid var(--bd2);
@@ -474,7 +474,7 @@
   <div class="exit-modal">
     <button class="exit-close" id="exit-x" aria-label="Chiudi">&#215;</button>
     <div class="exit-icon" aria-hidden="true">&#127919;</div>
-    <h3 id="exit-title" data-k="exit_h">Aspetta &mdash; rimani aggiornato</h3>
+    <h3 id="exit-title" data-k="exit_h">Aspetta: rimani aggiornato</h3>
     <p data-k="exit_p">La beta si chiude presto. Lascia la mail e ti avvisiamo prima degli altri. Zero spam.</p>
     <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener" class="btn-lg" id="exit-cta" data-k="exit_cta">Avvisami al lancio &#8594;</a>
     <button class="exit-skip" id="exit-skip" data-k="exit_skip">No grazie, continuo a guardare</button>
@@ -595,17 +595,17 @@
       <div class="step">
         <div class="step-n" aria-hidden="true">01</div>
         <h3 data-k="s1h">Ti siedi normalmente</h3>
-        <p data-k="s1b">Posiziona LeanTil sulla tua sedia. Non serve nessuna configurazione.</p>
+        <p data-k="s1b">Posiziona LeanTil sulla tua sedia e segui le istruzioni.</p>
       </div>
       <div class="step">
         <div class="step-n" aria-hidden="true">02</div>
         <h3 data-k="s2h">Rileva la postura</h3>
-        <p data-k="s2b">La piattaforma raccoglie i tuoi dati di postura in tempo reale e traccia i progressi nel tempo. Settimana dopo settimana, vedi se stai davvero migliorando.</p>
+        <p data-k="s2b">Il cuscino rileva in tempo reale come distribuisci il peso sulla seduta mentre l'app traccia i tuoi progressi settimana dopo settimana, così vedi con i tuoi occhi se stai migliorando.</p>
       </div>
       <div class="step">
         <div class="step-n" aria-hidden="true">03</div>
         <h3 data-k="s3h">Feedback visivo</h3>
-        <p data-k="s3b">Un segnale visivo discreto ti ricorda di tornare in posizione, senza distrarti.</p>
+        <p data-k="s3b">Quando rileva una postura scorretta prolungata, LeanTil ti manda un segnale senza distrarti.</p>
       </div>
     </div>
   </div>
@@ -615,8 +615,8 @@
 <section class="join">
   <div class="W">
     <div class="join-box rv">
-      <h2 data-k="jh">Unisciti alla beta.</h2>
-      <p class="join-sub" data-k="js">Influenza il prodotto.</p>
+      <h2 data-k="jh">Unisciti alla beta</h2>
+      <p class="join-sub" data-k="js">Aiutaci a costruire qualcosa che funzioni davvero</p>
       <ul class="perks">
         <li>
           <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -636,7 +636,7 @@
         </li>
       </ul>
       <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener" class="btn-lg" data-k="jcta">Riserva il tuo posto &#8594;</a>
-      <p class="join-note" data-k="join_note">Gratuito per i beta tester &mdash; 3 domande, 2 minuti. Ti risponderemo entro 48h.</p>
+      <p class="join-note" data-k="join_note">Gratuito per i beta tester! 3 domande, 2 minuti. Ti risponderemo entro 48h.</p>
     </div>
   </div>
 </section>
@@ -653,7 +653,7 @@
         </div>
         <div class="founder-text">
           <strong data-k="founder_strong_1">Caterina, Founder</strong>
-          <p data-k="founder_p_1">LeanTil nasce nel pieno del COVID-19, quando ore infinite davanti allo schermo e zero movimento sono diventati la norma. Risultato? Schiena a pezzi. Quello &egrave; stato per me un problema da risolvere. Se lo senti tuo anche tu, <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener">riserva un posto nella beta</a> &mdash; e teniamoci in contatto su <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+          <p data-k="founder_p_1">LeanTil nasce nel pieno del COVID-19, quando ore infinite davanti allo schermo e zero movimento sono diventati la norma. Risultato? Schiena a pezzi. Quello &egrave; stato per me un problema da risolvere. Se lo senti tuo anche tu, <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener">riserva un posto nella beta</a> e teniamoci in contatto su <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">LinkedIn</a>.</p>
         </div>
       </div>
 
@@ -771,7 +771,7 @@ var C = {
     fw3:'🏢 Chi lavora 6+ ore alla scrivania',
     fw4:'🎮 Gamer e creator',
     illus_label:'Come LeanTil percepisce la postura',
-    pill1:'Rileva l\u2019incurvamento', pill2:'Segnale risale la colonna', pill3:'Torni in posizione',
+    pill1:'Rileva l\u2019incurvamento', pill2:'Ti avvisa', pill3:'Torni in posizione',
     pa:'8 ore seduto al giorno:',
     pb:'\u00a0la postura scorretta non fa solo male alla schiena, ti prosciuga l\u2019energia.',
     b1t:'Meno tensione', b1b:'Riduci il carico su collo e spalle correggendo i piccoli slouch prima che diventino dolore.',
@@ -781,7 +781,7 @@ var C = {
     s1h:'Ti siedi normalmente', s1b:'Posiziona LeanTil sulla tua sedia. Non serve nessuna configurazione.',
     s2h:'Rileva la postura', s2b:'La piattaforma raccoglie i tuoi dati di postura in tempo reale e traccia i progressi nel tempo. Settimana dopo settimana, vedi se stai davvero migliorando.',
     s3h:'Feedback visivo', s3b:'Un segnale visivo discreto ti ricorda di tornare in posizione, senza distrarti.',
-    jh:'Unisciti alla beta.', js:'Influenza il prodotto.',
+    jh:'Unisciti alla beta', js:'Creiamo qualcosa che funzioni davvero',
     p1:'Sei tra i primi a provarlo',
     p2:'Influenzi design e funzionalit\u00e0',
     p3:'Accesso prioritario al lancio',
@@ -820,17 +820,17 @@ var C = {
     fw3:'🏢 Anyone working 6+ hours at a desk',
     fw4:'🎮 Gamers &amp; creators',
     illus_label:'How LeanTil detects posture',
-    pill1:'Detects the slouch', pill2:'Signal travels the spine', pill3:'You sit back up',
+    pill1:'Detects the slouch', pill2:'Send signal', pill3:'You sit back up',
     pa:'8 hours sitting a day:',
     pb:'\u00a0poor posture doesn\'t just hurt your lower back, it drains your energy.',
     b1t:'Less tension', b1b:'Reduce the load on your neck and shoulders by correcting micro-slouches before they turn into pain.',
     b2t:'More mental energy', b2b:'An open posture improves oxygenation and focus during deep work sessions.',
     b3t:'Lasting habits', b3b:'LeanTil trains your body to recognise the correct position naturally over time.',
     how_h:'How it works', how_s:'Three steps. Zero complexity.',
-    s1h:'Sit normally', s1b:'Place LeanTil on your chair. No setup required.',
-    s2h:'Detects posture', s2b:'The platform collects your posture data in real-time and tracks your progress over time. Week by week, you can see whether you\'re actually improving.',
-    s3h:'Visual feedback', s3b:'A subtle visual signal reminds you to sit back up, without breaking your focus.',
-    jh:'Join the beta.', js:'Shape the product.',
+    s1h:'Sit normally', s1b:'Place LeanTil on your chair and follow the instructions.',
+    s2h:'Detects posture', s2b:'LeanTil tracks your workout in real time, while the app tracks your progress week by week: see if you\'re improving.',
+    s3h:'Visual feedback', s3b:'When LeanTil detects prolonged poor posture, it sends you a signal without distracting you.',
+    jh:'Join the beta', js:'Shape with us build something that really works',
     p1:'Be among the first to try it',
     p2:'Shape design and features',
     p3:'Priority launch access',
