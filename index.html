@@ -15,7 +15,7 @@
   <link rel="alternate" hreflang="en" href="https://www.leantil.com/en/" />
   <link rel="alternate" hreflang="x-default" href="https://www.leantil.com/" />
 
-  <!-- ══ OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ══ -->
+  <!-- ══ OPEN GRAPH ══ -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://www.leantil.com/" />
   <meta property="og:title"       content="LeanTil – La tua schiena ti ringrazia alle 18:00" />
@@ -51,7 +51,8 @@
           "contactType": "customer support"
         },
         "founder": [
-          { "@type": "Person", "name": "Caterina Grimaldi", "url": "https://www.linkedin.com/in/caterina-grimaldi/" }
+          { "@type": "Person", "name": "Caterina", "url": "https://www.linkedin.com/in/caterina-grimaldi/" },
+          { "@type": "Person", "name": "Giuseppe" }
         ]
       },
       {
@@ -119,10 +120,7 @@
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1WJG24H9T"></script>
   <script>
-    gtag('config', 'G-S1WJG24H9T', {
-      anonymize_ip: true,
-      send_page_view: true
-    });
+    gtag('config', 'G-S1WJG24H9T', { anonymize_ip:true, send_page_view:true });
   </script>
 
   <style>
@@ -155,7 +153,6 @@
     .W { max-width:1080px; margin:0 auto; padding:0 28px; }
     :focus-visible { outline:2px solid var(--p2); outline-offset:3px; border-radius:4px; }
 
-    /* ── KEYFRAMES ── */
     @keyframes fadeUp {
       from { opacity:0; transform:translateY(20px); }
       to   { opacity:1; transform:translateY(0); }
@@ -272,9 +269,7 @@
 
     /* ── FOR WHO STRIP ── */
     .forwho-strip { padding:0 0 48px; }
-    .forwho-chips {
-      display:flex; justify-content:center; gap:10px; flex-wrap:wrap;
-    }
+    .forwho-chips { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; }
     .forwho-chip {
       display:inline-flex; align-items:center; gap:7px;
       background:var(--card); border:1px solid var(--bd2);
@@ -354,10 +349,11 @@
     .join-note { font-size:12.5px; color:var(--dim); margin-top:14px; position:relative; }
 
     /* ── FOUNDER STRIP ── */
-    .founder-strip { padding:0 0 48px; }
-    .founder-inner {
-      background:var(--card); border:1px solid var(--bd); border-radius:16px;
-      padding:24px 28px; display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap;
+    .founder-strip { padding:0 0 72px; }
+    .founder-strip-title {
+      font-size:13px; font-weight:600; color:var(--dim);
+      letter-spacing:.08em; text-transform:uppercase;
+      margin-bottom:20px; text-align:center;
     }
     .founders-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
     .founder-card-single {
@@ -414,8 +410,7 @@
       background:rgba(0,0,0,.78);
       backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
       display:flex; align-items:center; justify-content:center;
-      opacity:0; pointer-events:none;
-      transition:opacity .25s ease;
+      opacity:0; pointer-events:none; transition:opacity .25s ease;
     }
     #exit-overlay.visible { opacity:1; pointer-events:all; }
     .exit-modal {
@@ -541,7 +536,6 @@
     <p class="prob-big rv">
       <span data-k="pa">8 ore seduto al giorno:</span><span class="dim" data-k="pb">&nbsp;la postura scorretta non fa solo male alla schiena, ti prosciuga l&rsquo;energia.</span>
     </p>
-
     <div class="cards">
       <div class="card rv">
         <div class="card-ico" aria-hidden="true">
@@ -587,7 +581,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -648,51 +641,35 @@
   </div>
 </section>
 
-<!-- FOUNDER STRIP -->
+<!-- FOUNDER STRIP — DUE CO-FOUNDER -->
 <section class="founder-strip rv">
   <div class="W">
-    <div class="founder-inner">
-      <div class="founder-avatar" style="padding:0;overflow:hidden;">
-        <img src="foto-caterina.jpeg" alt="Caterina" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
-      </div>
-      <div class="founder-text">
-        <strong data-k="founder_strong">Lockdown davanti a uno schermo.</strong>
-        <p data-k="founder_p">LeanTil nasce nel pieno del COVID-19, quando ore infinite davanti allo schermo e zero movimento sono diventati la norma. Risultato? Schiena a pezzi. Quello &egrave; stato per me un problema da risolvere. Se lo senti tuo anche tu, <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener">riserva un posto nella beta</a> &mdash; e teniamoci in contatto su <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">LinkedIn</a>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--
-════════════════════════════════════════════════════════════
-SEZIONE DUE CO-FOUNDER — decommentare quando pronti
-════════════════════════════════════════════════════════════
-
-<section class="founder-strip rv">
-  <div class="W">
+    <p class="founder-strip-title" data-k="founders_title">Chi c&rsquo;&egrave; dietro LeanTil</p>
     <div class="founders-grid">
+
       <div class="founder-card-single">
         <div class="founder-avatar" style="padding:0;overflow:hidden;">
           <img src="foto-caterina.jpeg" alt="Caterina" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
         </div>
         <div class="founder-text">
           <strong data-k="founder_strong_1">Lockdown davanti a uno schermo.</strong>
-          <p data-k="founder_p_1">...</p>
+          <p data-k="founder_p_1">LeanTil nasce nel pieno del COVID-19, quando ore infinite davanti allo schermo e zero movimento sono diventati la norma. Risultato? Schiena a pezzi. Quello &egrave; stato per me un problema da risolvere. Se lo senti tuo anche tu, <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener">riserva un posto nella beta</a> &mdash; e teniamoci in contatto su <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">LinkedIn</a>.</p>
         </div>
       </div>
+
       <div class="founder-card-single">
         <div class="founder-avatar" style="padding:0;overflow:hidden;">
           <img src="foto-giuseppe.jpg" alt="Giuseppe" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
         </div>
         <div class="founder-text">
-          <strong data-k="founder_strong_2">Headline secondo co-founder.</strong>
-          <p data-k="founder_p_2">...</p>
+          <strong data-k="founder_strong_2">Ergonomia da corsia, applicata alla scrivania.</strong>
+          <p data-k="founder_p_2">Second-time founder con anni di esperienza nei sistemi di seduta per brand automobilistici di lusso. Con LeanTil porta l&rsquo;ergonomia avanzata nella vita di tutti i giorni, per prevenire il mal di schiena prima che diventi un problema.</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
--->
 
 <!-- FAQ -->
 <section class="faq">
@@ -811,8 +788,11 @@ var C = {
     p4:'Pensato per chi lavora 6+ ore al giorno alla scrivania',
     jcta:'Riserva il tuo posto \u2192',
     join_note:'Gratuito per i beta tester \u2014 3 domande, 2 minuti. Ti risponderemo entro 48h.',
-    founder_strong:'Lockdown davanti a uno schermo.',
-    founder_p:'LeanTil nasce nel pieno del COVID-19, quando ore infinite davanti allo schermo e zero movimento sono diventati la norma. Risultato? Schiena a pezzi. Quello \u00e8 stato per me un problema da risolvere. Se lo senti tuo anche tu, <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener">riserva un posto nella beta</a> \u2014 e teniamoci in contatto su <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">LinkedIn</a>.',
+    founders_title:'Chi c\u2019\u00e8 dietro LeanTil',
+    founder_strong_1:'Lockdown davanti a uno schermo.',
+    founder_p_1:'LeanTil nasce nel pieno del COVID-19, quando ore infinite davanti allo schermo e zero movimento sono diventati la norma. Risultato? Schiena a pezzi. Quello \u00e8 stato per me un problema da risolvere. Se lo senti tuo anche tu, <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener">riserva un posto nella beta</a> \u2014 e teniamoci in contatto su <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">LinkedIn</a>.',
+    founder_strong_2:'Ergonomia da corsia, applicata alla scrivania.',
+    founder_p_2:'Second-time founder con anni di esperienza nei sistemi di seduta per brand automobilistici di lusso. Con LeanTil porta l\u2019ergonomia avanzata nella vita di tutti i giorni, per prevenire il mal di schiena prima che diventi un problema.',
     fq:'Domande frequenti',
     q1:'Quando sar\u00e0 disponibile LeanTil?', a1:'LeanTil \u00e8 in fase di beta testing con un primo gruppo di early adopter. Se vuoi partecipare, iscriviti tramite il form e ti contatteremo direttamente.',
     q2:'Come posso partecipare alla beta?', a2:'Clicca su \u201cRiserva il tuo posto\u201d e compila il form. Ti contatteremo direttamente con tutte le istruzioni entro 48 ore.',
@@ -857,8 +837,11 @@ var C = {
     p4:'Made for people who spend 6+ hours a day at a desk',
     jcta:'Reserve your spot \u2192',
     join_note:'Free for beta testers \u2014 3 questions, 2 minutes. We\'ll reply within 48h.',
-    founder_strong:'Lockdown in front of a screen.',
-    founder_p:'LeanTil was born in the middle of COVID-19, when endless hours at a desk and zero movement became the norm. The result? A wrecked back. That was a problem I had to solve. If you feel the same way, <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener">reserve a spot in the beta</a> \u2014 and let\u2019s stay in touch on <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">LinkedIn</a>.',
+    founders_title:'The people behind LeanTil',
+    founder_strong_1:'Lockdown in front of a screen.',
+    founder_p_1:'LeanTil was born in the middle of COVID-19, when endless hours at a desk and zero movement became the norm. The result? A wrecked back. That was a problem I had to solve. If you feel the same way, <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener">reserve a spot in the beta</a> \u2014 and let\u2019s stay in touch on <a href="https://www.linkedin.com/in/caterina-grimaldi/" target="_blank" rel="noopener">LinkedIn</a>.',
+    founder_strong_2:'Automotive ergonomics, brought to the desk.',
+    founder_p_2:'Second-time founder with years of experience in seating systems for luxury automotive brands. With LeanTil, he brings advanced ergonomics into everyday life \u2014 before back pain becomes a problem.',
     fq:'Frequently asked questions',
     q1:'When will LeanTil be available?', a1:'LeanTil is currently in beta testing with a first group of early adopters. Sign up through the form and we\'ll contact you directly.',
     q2:'How can I join the beta?', a2:'Click \u201cReserve your spot\u201d and fill out the form. We\'ll reach out with all the details within 48 hours.',
