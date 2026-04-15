@@ -43,15 +43,16 @@
         "@id": "https://www.leantil.com/#organization",
         "name": "LeanTil",
         "url": "https://www.leantil.com/",
-        "logo": "https://www.leantil.com/leantil-logo.png",
+        "logo": "https://www.leantil.com/LeanTil_white_logo.png",
         "sameAs": ["https://www.linkedin.com/company/leantil"],
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "info@leantil.com",
-          "contactType": "customer support"
+          "contactType": "customer support",
+          "availableLanguage": ["it", "en"]
         },
         "founder": [
-          { "@type": "Person", "name": "Caterina", "url": "https://www.linkedin.com/in/caterina-grimaldi/" },
+          { "@type": "Person", "name": "Caterina Grimaldi", "url": "https://www.linkedin.com/in/caterina-grimaldi/" },
           { "@type": "Person", "name": "Giuseppe" }
         ]
       },
@@ -69,27 +70,48 @@
         "name": "LeanTil",
         "description": "Cuscino intelligente per la postura che rileva in tempo reale la distribuzione del peso sulla seduta e invia un segnale visivo discreto quando la postura diventa scorretta.",
         "brand": { "@id": "https://www.leantil.com/#organization" },
-        "category": "Ergonomic seating / Posture correction device"
+        "category": "Posture correction device",
+        "url": "https://www.leantil.com/pricing.html",
+        "image": "https://www.leantil.com/render.png",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.leantil.com/pricing.html",
+          "priceCurrency": "EUR",
+          "price": "139",           
+          "priceValidUntil": "2026-05-31",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": { "@id": "https://www.leantil.com/#organization" }
+        }
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Quando sarà disponibile LeanTil?",
-            "acceptedAnswer": { "@type": "Answer", "text": "LeanTil è disponibile ora. Ordina tramite il form e ti contatteremo direttamente." }
-          },
-          {
-            "@type": "Question",
             "name": "Come funziona LeanTil?",
-            "acceptedAnswer": { "@type": "Answer", "text": "LeanTil è un cuscino che si adatta a qualsiasi sedia. Rileva in tempo reale come distribuisci il peso sulla seduta. Quando riconosce una postura scorretta prolungata, invia un segnale visivo discreto per ricordarti di tornare in posizione." }
+            "acceptedAnswer": { "@type": "Answer", "text": "LeanTil è un cuscino intelligente che si adatta a qualsiasi sedia. Rileva in tempo reale come distribuisci il peso sulla seduta. Quando riconosce una postura scorretta prolungata, invia un segnale visivo discreto per ricordarti di tornare in posizione." }
           },
           {
             "@type": "Question",
             "name": "Devo cambiare tutta la mia postazione?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No. LeanTil si adatta a qualsiasi sedia e non richiede modifiche alla postazione." }
+            "acceptedAnswer": { "@type": "Answer", "text": "No. LeanTil si adatta a qualsiasi sedia — da ufficio, gaming o domestica — senza nessuna modifica alla tua postazione." }
+          },
+          {
+            "@type": "Question",
+            "name": "Come posso ordinare LeanTil?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Clicca su Ordina adesso e compila il form. Nessun addebito immediato: ti contatteremo per confermare i dettagli di pagamento." }
+          },
+          {
+            "@type": "Question",
+            "name": "Quando ricevo LeanTil?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Dopo l'ordine ti contatteremo con la data di spedizione stimata e tutti i dettagli per la consegna." }
+          },
+          {
+            "@type": "Question",
+            "name": "LeanTil funziona con qualsiasi sedia?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sì. LeanTil è compatibile con sedie da ufficio, gaming e domestiche, senza nessuna modifica alla tua postazione." }
           }
-          
         ]
       }
     ]
@@ -113,6 +135,15 @@
     gtag('config', 'G-5921KF5XT9', { anonymize_ip:true, send_page_view:true });
   </script>
 
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wb0066oo4n");
+  </script>
+  
   <style>
     *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
 
@@ -289,25 +320,6 @@
       filter:drop-shadow(0 20px 56px rgba(107,63,160,.3)); z-index:1;
     }
 
-    <section class="why-leantil">
-      <h2>Perché LeanTil e non un cuscino normale?</h2>
-      
-      <div class="three-cols">
-        <div>
-          <h3>🧠 Intelligente</h3>
-          <p>Sensori rilevano COME stai seduto, non solo SE. L'app impara il tuo corpo nel tempo.</p>
-        </div>
-        <div>
-          <h3>📍 Real-time feedback</h3>
-          <p>Ti avverte in silenzio quando il tuo corpo torna in slouch, nel momento in cui succede.</p>
-        </div>
-        <div>
-          <h3>📈 Progress tracking</h3>
-          <p>Vedi settimana per settimana come migliora la tua consapevolezza della postura.</p>
-        </div>
-      </div>
-    </section>
-    
     /* ── FOR WHO STRIP ── */
     .forwho-strip { padding:0 0 48px; }
     .forwho-title {
@@ -485,6 +497,21 @@
     .foot-links svg { width:14px; height:14px; flex-shrink:0; }
     .foot-copy { font-size:12.5px; color:var(--dim); margin-top:28px; text-align:center; }
 
+    /* ── RESEARCH STRIP ── */
+    .research-strip { padding:0 0 72px; }
+    .research-inner {
+      background:rgba(107,63,160,.07); border:1px solid rgba(107,63,160,.2);
+      border-radius:16px; padding:24px 32px;
+      display:flex; align-items:center; gap:18px; max-width:760px; margin:0 auto;
+    }
+    .research-ico { font-size:24px; flex-shrink:0; line-height:1; }
+    .research-claim { font-size:14.5px; font-weight:600; color:var(--tx); line-height:1.6; margin-bottom:5px; }
+    .research-src { font-size:11.5px; color:var(--dim); letter-spacing:.05em; }
+    @media(max-width:540px){
+      .research-inner { padding:16px 18px; gap:12px; }
+      .research-claim { font-size:13.5px; }
+    }
+    
     /* ── SCROLL REVEAL ── */
     .rv { opacity:0; transform:translateY(26px); transition:opacity .65s ease, transform .65s ease; }
     .rv.on { opacity:1; transform:translateY(0); }
@@ -641,10 +668,24 @@
       <span class="forwho-chip" data-k="fw2">✍️ Freelance &amp; remote worker</span>
       <span class="forwho-chip" data-k="fw3">🏢 Chi lavora 6+ ore alla scrivania</span>
       <span class="forwho-chip" data-k="fw4">🎮 Gamer e creator</span>
+      <span class="forwho-chip" data-k="fw5">🎁 Regalo per chi ami</span>
     </div>
   </div>
 </div>
 
+<!-- RESEARCH CREDIBILITY STRIP -->
+<div class="research-strip rv">
+  <div class="W">
+    <div class="research-inner">
+      <div class="research-ico" aria-hidden="true">🔬</div>
+      <div>
+        <p class="research-claim" data-k="research_claim">Lavorare con la testa inclinata in avanti aumenta il carico sulla colonna cervicale fino a 5 volte rispetto alla postura corretta — l'equivalente di 27 kg sul collo.</p>
+        <p class="research-src" data-k="research_src">Hansraj K.K. — Surgical Technology International (2014), citato da NIH PubMed</p>
+      </div>
+    </div>
+  </div>
+</div>
+  
 <!-- PROBLEM + BENEFIT CARDS -->
 <section class="problem">
   <div class="W">
@@ -897,6 +938,7 @@ var C = {
     fw2:'✍️ Freelance &amp; remote worker',
     fw3:'🏢 Chi lavora 6+ ore alla scrivania',
     fw4:'🎮 Gamer e creator',
+    fw5:'🎁 Regalo per chi ami',
     illus_label:'Come LeanTil percepisce la postura',
     pill1:'Rileva l\u2019incurvamento',
     pill2:'LeanTil ti avverte',
@@ -953,6 +995,9 @@ var C = {
     fw2:'✍️ Freelancers &amp; remote workers',
     fw3:'🏢 Anyone working 6+ hours at a desk',
     fw4:'🎮 Gamers &amp; creators',
+    fw5:'🎁 A gift for someone you care about',
+    research_claim:'Working with your head tilted forward increases the load on the cervical spine up to 5 times compared to correct posture \u2014 the equivalent of 27 kg on your neck.',
+    research_src:'Hansraj K.K. \u2014 Surgical Technology International (2014), cited by NIH PubMed',
     illus_label:'How LeanTil detects posture',
     pill1:'Detects the slouch',
     pill2:'LeanTil alerts you',
@@ -1056,20 +1101,26 @@ function resetCookies() {
 /* ══ GA4 — CTA click verso pricing (Step 1 del funnel) ══ */
 document.querySelectorAll('a[href*="pricing"]').forEach(function(el) {
   el.addEventListener('click', function() {
-    var secEl = this.closest('section') || this.closest('div');
+    var secEl = this.closest('section') || this.closest('div') || this.closest('header') || this.closest('footer');
     var sec = 'unknown';
+
     if (secEl) {
       if (secEl.id === 'hdr' || this.closest('#hdr')) sec = 'header';
       else if (secEl.classList.contains('hero')) sec = 'hero';
       else if (secEl.classList.contains('join')) sec = 'join';
       else if (secEl.classList.contains('micro-cta-strip')) sec = 'micro_cta';
-      else sec = secEl.className.replace(/\brv\b/g,'').trim().split(/\s+/)[0];
+      else if (this.closest('footer')) sec = 'footer';
+      else sec = (secEl.className || 'unknown').replace(/\brv\b/g,'').trim().split(/\s+/)[0] || 'unknown';
     }
-    gtag('event', 'cta_click_pricing', {
+
+    gtag('event', 'pricing_cta_click', {
       event_category: 'funnel',
       cta_section: sec,
-      cta_label: this.getAttribute('data-k') || 'cta',
-      language: curLang
+      cta_label: this.getAttribute('data-k') || this.id || 'cta',
+      cta_text: (this.textContent || '').trim(),
+      page_path: window.location.pathname,
+      language: curLang,
+      transport_type: 'beacon'
     });
   });
 });
@@ -1318,5 +1369,27 @@ if (sg && 'IntersectionObserver' in window) {
   resetInactivity();
 })();
 </script>
+
+<!-- LinkedIn Insight Tag -->
+<script type="text/javascript">
+_linkedin_partner_id = "110634169";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+(function(l) {
+  if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+  window.lintrk.q=[]}
+  var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";b.async = true;
+  b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+  s.parentNode.insertBefore(b, s);})(window.lintrk);
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+    src="https://px.ads.linkedin.com/collect/?pid=110634169&fmt=gif" />
+</noscript>
+  
 </body>
 </html>
