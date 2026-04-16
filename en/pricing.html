@@ -412,7 +412,7 @@
           <p class="price-note"><strong data-k="price_note_strong">Prezzo early adopter</strong>, <span data-k="price_note_rest">riservato ai primi ordini.</span></p>
         </div>
         <div class="card-top-visual">
-          <img src="render.png" alt="LeanTil, cuscino intelligente per la postura" width="180" height="180" loading="eager" />
+          <img src="/render.png" alt="LeanTil, cuscino intelligente per la postura" width="180" height="180" loading="eager" />
         </div>
       </div>
 
@@ -608,7 +608,7 @@ function setLang(l) {
 }
 
 document.getElementById('langBtn').addEventListener('click', function() {
-  window.location.href = '/pricing.html';
+  setLang(curLang === 'it' ? 'en' : 'it');
 });
 
 (function() {
