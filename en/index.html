@@ -1011,9 +1011,7 @@ function setLang(l) {
 }
 
 document.getElementById('langBtn').addEventListener('click', function() {
-  var next = curLang === 'it' ? 'en' : 'it';
-  gtag('event', 'language_switch', { event_category:'engagement', new_lang:next });
-  setLang(next);
+  window.location.href = '/';
 });
 
 /* ══ COOKIE ══ */
