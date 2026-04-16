@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>LeanTil | Ordina – Prezzo Early Adopter €139</title>
+  <title>LeanTil | Ordina - Prezzo Early Adopter €139</title>
   <meta name="description" content="LeanTil è il cuscino intelligente che rileva la tua postura in tempo reale e ti riporta in posizione senza interrompere il lavoro. Unisciti alla beta." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.leantil.com/pricing.html" />
@@ -44,12 +44,12 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
-    gtag(\'consent\', \'default\', { analytics_storage:\'denied\', ad_storage:\'denied\', wait_for_update:500 });
-    gtag(\'js\', new Date());
+    gtag('consent', 'default', { analytics_storage:'denied', ad_storage:'denied', wait_for_update:500 });
+    gtag('js', new Date());
   </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5921KF5XT9XXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5921KF5XT9"></script>
   <script>
-    gtag(\'config\', \'G-5921KF5XT9\', { anonymize_ip:true, send_page_view:true });
+    gtag('config', 'G-5921KF5XT9', { anonymize_ip:true, send_page_view:true });
   </script>
 
   <style>
@@ -68,7 +68,7 @@
       --glow: rgba(107,63,160,.4);
       --grad: linear-gradient(135deg,#6B3FA0 0%,#9B6FD0 100%);
       --green:#5DBB8A;
-      --f:    \'Plus Jakarta Sans\', system-ui, sans-serif;
+      --f:    'Plus Jakarta Sans', system-ui, sans-serif;
     }
 
     html { scroll-behavior:smooth; }
@@ -141,7 +141,7 @@
       max-width:400px; margin:0 auto;
     }
 
-    /* SECTION RULE: separatore editoriale hero → stat */
+    /* SECTION RULE */
     .section-rule {
       width:32px; height:1px;
       background:var(--dim);
@@ -172,6 +172,24 @@
       margin:0 auto;
     }
 
+    /* VALUE FRAME */
+    .value-frame {
+      display:grid; grid-template-columns:1fr 1fr 1fr;
+      gap:12px; margin-bottom:40px;
+    }
+    .vf-item {
+      background:var(--card); border:1px solid var(--bd);
+      border-radius:12px; padding:18px 16px; text-align:center;
+    }
+    .vf-num {
+      font-size:22px; font-weight:800; letter-spacing:-.02em;
+      color:var(--tx); line-height:1; margin-bottom:6px;
+    }
+    .vf-label { font-size:12px; color:var(--muted); line-height:1.5; }
+    @media(max-width:480px){
+      .value-frame { grid-template-columns:1fr; }
+    }
+    
     /* SPOTS */
     .spots-box {
       background:rgba(93,187,138,.06); border:1px solid rgba(93,187,138,.18);
@@ -191,7 +209,8 @@
       margin-bottom:20px; position:relative;
     }
     .pricing-card::before {
-      content:\'\'; position:absolute; top:-80px; left:50%; transform:translateX(-50%);
+      content:'';
+      position:absolute; top:-80px; left:50%; transform:translateX(-50%);
       width:100%; height:280px; border-radius:50%;
       background:radial-gradient(ellipse,rgba(107,63,160,.1) 0%,transparent 65%);
       pointer-events:none;
@@ -368,23 +387,29 @@
 <main class="page">
   <div class="W">
 
-    <!-- 1. HOOK -->
     <div class="hook">
       <span class="hook-eyebrow" data-k="eyebrow">Prenotazione early adopter</span>
-      <h1 class="hook-headline" data-k="headline">La tua schiena non può <em>aspettare</em> ancora</h1>
+      <h1 class="hook-headline" data-k="headline">Previeni oggi quello che <em>costerà caro</em> domani</h1>
       <p class="hook-sub" data-k="sub">LeanTil corregge la tua postura in silenzio, mentre lavori, senza che tu debba pensarci.</p>
     </div>
 
-    <!-- separatore editoriale: segnala cambio di registro senza uscire dal contesto -->
     <div class="section-rule" aria-hidden="true"></div>
 
-    <!-- 2. STAT BRIDGE -->
-    <div class="stat-bridge">
-      <span class="stat-bridge-num" data-k="stat_num">25 anni.</span>
-      <p class="stat-bridge-sub" data-k="stat_sub">È quanto passerai seduto, in media, nella tua vita.</p>
+    <div class="value-frame">
+      <div class="vf-item">
+        <p class="vf-num" data-k="vf1_num">~25 anni</p>
+        <p class="vf-label" data-k="vf1_label">Il tempo medio che una persona trascorre seduta nel corso della vita</p>
+      </div>
+      <div class="vf-item">
+        <p class="vf-num" data-k="vf2_num">60–90 €</p>
+        <p class="vf-label" data-k="vf2_label">Il costo medio di una seduta di fisioterapia preventiva</p>
+      </div>
+      <div class="vf-item">
+        <p class="vf-num" data-k="vf3_num">27 kg</p>
+        <p class="vf-label" data-k="vf3_label">Il carico extra sul collo con la testa inclinata in avanti di soli 15 cm</p>
+      </div>
     </div>
 
-    <!-- 3. SPOTS -->
     <div class="spots-box">
       <div style="display:flex;align-items:center;justify-content:space-between;">
         <p class="spots-text" data-k="spots"><strong>Primi 30 ordini:</strong> prezzo early adopter riservato.</p>
@@ -396,7 +421,6 @@
       <p style="font-size:11.5px;color:var(--dim);text-align:center;" data-k="spots_sub">22 su 30 posti già prenotati. Dopo il prezzo tornerà a €159</p>
     </div>
 
-    <!-- 4. PRICING CARD -->
     <div class="pricing-card">
       <div class="ea-badge">
         <span class="ea-dot" aria-hidden="true"></span>
@@ -427,19 +451,19 @@
         <ul class="includes-list">
           <li>
             <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <div><span data-k="inc1">Cuscino LeanTil</span><small data-k="inc1b">. Per riportarti in posizione, in silenzio.</small></div>
+            <div><span data-k="inc1">Cuscino LeanTil</span><small data-k="inc1b">, per riportarti in posizione in silenzio.</small></div>
           </li>
           <li>
             <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <div><span data-k="inc2">App con dashboard personale</span><small data-k="inc2b">. Traccia ogni giorno il tempo in postura corretta.</small></div>
+            <div><span data-k="inc2">App con dashboard personale</span><small data-k="inc2b">, per tracciare ogni giorno il tempo in postura corretta.</small></div>
           </li>
           <li>
             <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <div><span data-k="inc3">Accesso prioritario agli aggiornamenti</span><small data-k="inc3b">. I nostri early adopter sono di casa.</small></div>
+            <div><span data-k="inc3">Garanzia soddisfatti o rimborsati</span><small data-k="inc3b"> - se non ti convince, ti rimborsiamo.</small></div>
           </li>
           <li>
             <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <div><span data-k="inc4">Team dedicato alle tue esigenze</span></div>
+            <div><span data-k="inc4">Accesso diretto ai founder</span><small data-k="inc4b"> - puoi scriverci per qualsiasi cosa.</small></div>
           </li>
         </ul>
 
@@ -455,7 +479,6 @@
       </div>
     </div>
 
-    <!-- 5. GARANZIA -->
     <div class="guarantee">
       <div class="guarantee-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -466,13 +489,12 @@
       </div>
     </div>
 
-    <!-- 6. FAQ -->
     <div class="minifaq">
       <p class="minifaq-title" data-k="faq_title">Hai dubbi?</p>
 
       <div class="minifaq-item">
         <button class="minifaq-btn" aria-expanded="false">
-          <span data-k="fq1">Come funziona l\'ordine?</span>
+          <span data-k="fq1">Come funziona l'ordine?</span>
           <svg class="mchev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="minifaq-body"><p data-k="fa1">Compili il form con alcune domande. Nessun addebito immediato: ti contatteremo per confermare i dettagli di pagamento e la spedizione.</p></div>
@@ -483,7 +505,7 @@
           <span data-k="fq2">Quando ricevo LeanTil?</span>
           <svg class="mchev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="minifaq-body"><p data-k="fa2">Dopo l\'ordine ti contatteremo con la data di spedizione stimata e tutti i dettagli per la consegna.</p></div>
+        <div class="minifaq-body"><p data-k="fa2">Dopo l'ordine ti contatteremo con la data di spedizione stimata e tutti i dettagli per la consegna.</p></div>
       </div>
 
       <div class="minifaq-item">
@@ -501,14 +523,6 @@
         </button>
         <div class="minifaq-body"><p data-k="fa4">Una sedia ergonomica migliora il comfort, ma non cambia come ti siedi tu. Non ti avvisa quando scivoli in avanti, non monitora la tua postura nel tempo. LeanTil agisce sul comportamento, non sul mobilio.</p></div>
       </div>
-
-      <div class="minifaq-item">
-        <button class="minifaq-btn" aria-expanded="false">
-          <span data-k="fq5">È diverso dalla fisioterapia?</span>
-          <svg class="mchev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="minifaq-body"><p data-k="fa5">La fisioterapia cura un problema già presente. LeanTil non sostituisce un fisioterapista. Interviene prima, ogni giorno, per prevenire che il problema si presenti. Sono strumenti diversi e complementari.</p></div>
-      </div>
     </div>
 
     <p class="foot-note" data-k="foot_note">
@@ -521,158 +535,168 @@
 <script>
 var C = {
   it: {
-    lang:\'EN\',
-    eyebrow:\'Prenotazione early adopter\',
-    headline:\'La tua schiena non può <em>aspettare</em> ancora\',
-    sub:\'LeanTil corregge la tua postura in silenzio, mentre lavori, senza che tu debba pensarci.\',
-    stat_num:\'25 anni.\',
-    stat_sub:\'È quanto passerai seduto, in media, nella tua vita.\',
-    spots:\'<strong>Primi 30 ordini:</strong> prezzo early adopter riservato.\',
-    spots_sub:\'22 su 30 posti già prenotati. Dopo il prezzo tornerà a €159\',
-    ea_label:\'Early adopter\',
-    prod_name:\'LeanTil\',
-    prod_title:\'Cuscino smart per la postura\',
-    prod_desc:\'Si adatta a qualsiasi sedia. Monitora come stai seduto in tempo reale e ti avvisa, in silenzio, quando è il momento di correggerti.\',
-    price_note_strong:\'Prezzo early adopter\',
-    price_note_rest:\'riservato ai primi 30 ordini.\',
-    inc_label:\'Cosa è incluso\',
-    inc1:\'Cuscino LeanTil\',
-    inc1b:\'. Per riportarti in posizione, in silenzio.\',
-    inc2:\'App con dashboard personale\',
-    inc2b:\'. Traccia ogni giorno il tempo in postura corretta.\',
-    inc3:\'Accesso prioritario agli aggiornamenti\',
-    inc3b:\'. I nostri early adopter sono di casa.\',
-    inc4:\'Team dedicato alle tue esigenze\',
-    no_charge:\'Nessun addebito immediato. Ti contatteremo per confermare i dettagli di pagamento.\',
-    cta_text:\'Prenota il tuo posto\',
-    guar_title:\'Garanzia soddisfatti o rimborsati\',
-    guar_desc:\'Se LeanTil non soddisfa le tue aspettative, ti rimborsiamo. Senza domande, senza procedure complicate. Il rischio è nostro, non tuo.\',
-    faq_title:\'Hai dubbi?\',
-    fq1:\'Come funziona l\\\'ordine?\',
-    fa1:\'Compili il form con alcune domande. Nessun addebito immediato: ti contatteremo per confermare i dettagli di pagamento e la spedizione.\',
-    fq2:\'Quando ricevo LeanTil?\',
-    fa2:\'Dopo l\\\'ordine ti contatteremo con la data di spedizione stimata e tutti i dettagli per la consegna.\',
-    fq3:\'Funziona con qualsiasi tipo di sedia?\',
-    fa3:\'Sì. LeanTil è compatibile con sedie da ufficio, gaming e domestiche, senza nessuna modifica alla tua postazione.\',
-    fq4:\'Non mi basta una sedia ergonomica?\',
-    fa4:\'Una sedia ergonomica migliora il comfort, ma non cambia come ti siedi tu. Non ti avvisa quando scivoli in avanti, non monitora la tua postura nel tempo. LeanTil agisce sul comportamento, non sul mobilio.\',
-    fq5:\'È diverso dalla fisioterapia?\',
-    fa5:\'La fisioterapia cura un problema già presente. LeanTil non sostituisce un fisioterapista. Interviene prima, ogni giorno, per prevenire che il problema si presenti. Sono strumenti diversi e complementari.\',
-    foot_note:\'Hai domande? Scrivici a <a href="mailto:info@leantil.com">info@leantil.com</a>: rispondiamo entro 48h. &nbsp;|&nbsp; <a href="https://www.leantil.com/privacy.html">Privacy Policy</a>\'
+    lang:'EN',
+    eyebrow:'Prenotazione early adopter',
+    headline:'Previeni oggi quello che <em>costerà caro</em> domani',
+    sub:'LeanTil corregge la tua postura in silenzio, mentre lavori, senza che tu debba pensarci.',
+    stat_num:'25 anni.',
+    stat_sub:'È il tempo medio che passerai seduto.',
+    vf1_num:'~25 anni',
+    vf1_label:'Il tempo medio che una persona trascorre seduta nel corso della vita',
+    vf2_num:'60–90 €',
+    vf2_label:'Il costo medio di una seduta di fisioterapia preventiva',
+    vf3_num:'27 kg',
+    vf3_label:'Il carico extra sul collo con la testa inclinata in avanti di soli 15 cm',
+    spots:'<strong>Primi 30 ordini:</strong> prezzo early adopter riservato.',
+    spots_sub:'22 su 30 posti già prenotati. Dopo il prezzo tornerà a €159',
+    ea_label:'Early adopter',
+    prod_name:'LeanTil',
+    prod_title:'Cuscino smart per la postura',
+    prod_desc:'Si adatta a qualsiasi sedia. Monitora come stai seduto in tempo reale e ti avvisa, in silenzio, quando è il momento di correggerti.',
+    price_note_strong:'Prezzo early adopter',
+    price_note_rest:'riservato ai primi 30 ordini.',
+    inc_label:'Cosa è incluso',
+    inc1:'Cuscino LeanTil',
+    inc1b:', per riportarti in posizione in silenzio.',
+    inc2:'App con dashboard personale',
+    inc2b:', per tracciare ogni giorno il tempo in postura corretta.',
+    inc3:'Garanzia soddisfatti o rimborsati',
+    inc3b:' - se non ti convince, ti rimborsiamo.',
+    inc4:'Accesso diretto ai founder',
+    inc4b:' - puoi scriverci per qualsiasi cosa, ti rispondiamo noi.',
+    no_charge:'Nessun addebito immediato. Ti contatteremo per confermare i dettagli di pagamento.',
+    cta_text:'Prenota il tuo posto',
+    guar_title:'Garanzia soddisfatti o rimborsati',
+    guar_desc:'Se LeanTil non soddisfa le tue aspettative, ti rimborsiamo. Senza domande, senza procedure complicate. Il rischio è nostro, non tuo.',
+    faq_title:'Hai dubbi?',
+    fq1:"Come funziona l'ordine?",
+    fa1:'Compili il form con alcune domande. Nessun addebito immediato: ti contatteremo per confermare i dettagli di pagamento e la spedizione.',
+    fq2:'Quando ricevo LeanTil?',
+    fa2:"Dopo l'ordine ti contatteremo con la data di spedizione stimata e tutti i dettagli per la consegna.",
+    fq3:'Funziona con qualsiasi tipo di sedia?',
+    fa3:'Sì. LeanTil è compatibile con sedie da ufficio, gaming e domestiche, senza nessuna modifica alla tua postazione.',
+    fq4:'Non mi basta una sedia ergonomica?',
+    fa4:'Una sedia ergonomica migliora il comfort, ma non cambia come ti siedi tu. Non ti avvisa quando scivoli in avanti, non monitora la tua postura nel tempo. LeanTil agisce sul comportamento, non sul mobilio.',
+    foot_note:'Hai domande? Scrivici a <a href="mailto:info@leantil.com">info@leantil.com</a>: rispondiamo entro 48h. &nbsp;|&nbsp; <a href="https://www.leantil.com/privacy.html">Privacy Policy</a>'
   },
   en: {
-    lang:\'IT\',
-    eyebrow:\'Early adopter order\',
-    headline:\'Your back can\\\'t <em>wait</em> any longer\',
-    sub:\'LeanTil corrects your posture silently, while you work, without you having to think about it.\',
-    stat_num:\'25 years.\',
-    stat_sub:\'That\\\'s how long you\\\'ll spend sitting, on average, in your lifetime.\',
-    spots:\'<strong>First 30 orders:</strong> early adopter price reserved.\',
-    spots_sub:\'22 out of 30 spots already reserved. Price returns to €159 after that\',
-    ea_label:\'Early adopter\',
-    prod_name:\'LeanTil\',
-    prod_title:\'Smart posture cushion\',
-    prod_desc:\'Fits any chair. Monitors how you sit in real time and silently alerts you when it\\\'s time to correct your posture.\',
-    price_note_strong:\'Early adopter price\',
-    price_note_rest:\'reserved for the first 30 orders.\',
-    inc_label:\'What\\\'s included\',
-    inc1:\'LeanTil cushion\',
-    inc1b:\'. To bring you back to position, silently.\',
-    inc2:\'App with personal dashboard\',
-    inc2b:\'. Track your time in correct posture every day.\',
-    inc3:\'Priority access to updates\',
-    inc3b:\'. Our early adopters are family.\',
-    inc4:\'Team dedicated to your needs\',
-    no_charge:\'No immediate charge. We\\\'ll contact you to confirm payment details.\',
-    cta_text:\'Reserve your spot\',
-    guar_title:\'Money-back guarantee\',
-    guar_desc:\'If LeanTil doesn\\\'t meet your expectations, we\\\'ll refund you. No questions, no hassle. The risk is ours, not yours.\',
-    faq_title:\'Any questions?\',
-    fq1:\'How does the order work?\',
-    fa1:\'Fill out a short form. No immediate charge. We\\\'ll contact you to confirm payment details and shipping.\',
-    fq2:\'When will I receive LeanTil?\',
-    fa2:\'After your order, we\\\'ll contact you with the estimated shipping date and all delivery details.\',
-    fq3:\'Does it work with any type of chair?\',
-    fa3:\'Yes. LeanTil is compatible with office, gaming, and home chairs, with no modifications to your setup.\',
-    fq4:\'Isn\\\'t an ergonomic chair enough?\',
-    fa4:\'An ergonomic chair improves comfort, but it doesn\\\'t change how you sit. It won\\\'t alert you when you\\\'re slouching forward, and it doesn\\\'t track your posture over time. LeanTil works on your behavior, not your furniture.\',
-    fq5:\'Is it different from physiotherapy?\',
-    fa5:\'Physiotherapy treats a problem that\\\'s already there. LeanTil doesn\\\'t replace a physiotherapist. It acts before the problem appears, every day. They\\\'re two different and complementary things.\',
-    foot_note:\'Questions? Write to <a href="mailto:info@leantil.com">info@leantil.com</a>: we reply within 48h. &nbsp;|&nbsp; <a href="https://www.leantil.com/privacy.html">Privacy Policy</a>\'
+    lang:'IT',
+    eyebrow:'Early adopter order',
+    headline:'Prevent today what will <em>cost you</em> tomorrow',
+    sub:'LeanTil corrects your posture silently, while you work, without you having to think about it.',
+    stat_num:'25 years.',
+    stat_sub:'The average time you will spend sitting.',
+    vf1_num:'~25 years',
+    vf1_label:'The average time a person spends sitting over a lifetime',
+    vf2_num:'€60–90',
+    vf2_label:'The average cost of a single preventive physiotherapy session',
+    vf3_num:'27 kg',
+    vf3_label:'The extra load on your neck with your head tilted forward just 15 cm',
+    spots:'<strong>First 30 orders:</strong> early adopter price reserved.',
+    spots_sub:'22 out of 30 spots already reserved. Price returns to €159 after that',
+    ea_label:'Early adopter',
+    prod_name:'LeanTil',
+    prod_title:'Smart posture cushion',
+    prod_desc:'Fits any chair. Monitors how you sit in real time and silently alerts you when it\'s time to correct your posture.',
+    price_note_strong:'Early adopter price',
+    price_note_rest:'reserved for the first 30 orders.',
+    inc_label:'What\'s included',
+    inc1:'LeanTil cushion',
+    inc1b:', to bring you back to position silently.',
+    inc2:'App with personal dashboard',
+    inc2b:', to track your time in correct posture every day.',
+    inc3:'Money-back guarantee',
+    inc3b:' - if it doesn\'t work for you, we\'ll refund you.',
+    inc4:'Direct access to the founders',
+    inc4b:' - write to us for anything.',
+    no_charge:'No immediate charge. We\'ll contact you to confirm payment details.',
+    cta_text:'Reserve your spot',
+    guar_title:'Money-back guarantee',
+    guar_desc:'If LeanTil doesn\'t meet your expectations, we\'ll refund you. No questions, no hassle. The risk is ours, not yours.',
+    faq_title:'Any questions?',
+    fq1:'How does the order work?',
+    fa1:'Fill out a short form. No immediate charge. We\'ll contact you to confirm payment details and shipping.',
+    fq2:'When will I receive LeanTil?',
+    fa2:'After your order, we\'ll contact you with the estimated shipping date and all delivery details.',
+    fq3:'Does it work with any type of chair?',
+    fa3:'Yes. LeanTil is compatible with office, gaming, and home chairs, with no modifications to your setup.',
+    fq4:"Isn't an ergonomic chair enough?",
+    fa4:"An ergonomic chair improves comfort, but it doesn't change how you sit. It won't alert you when you're slouching forward, and it doesn't track your posture over time. LeanTil works on your behavior, not your furniture.",
+    foot_note:'Questions? Write to <a href="mailto:info@leantil.com">info@leantil.com</a>: we reply within 48h. &nbsp;|&nbsp; <a href="https://www.leantil.com/privacy.html">Privacy Policy</a>'
   }
 };
 
-var curLang = \'it\';
+var curLang = 'it';
 
 function setLang(l) {
   curLang = l;
   var d = C[l];
-  document.querySelectorAll(\'[data-k]\').forEach(function(el) {
-    var k = el.getAttribute(\'data-k\');
+  document.querySelectorAll('[data-k]').forEach(function(el) {
+    var k = el.getAttribute('data-k');
     if (d[k] !== undefined) el.innerHTML = d[k];
   });
-  document.getElementById(\'langBtn\').textContent = d.lang;
+  document.getElementById('langBtn').textContent = d.lang;
   document.documentElement.lang = l;
 }
 
-document.getElementById(\'langBtn\').addEventListener(\'click\', function() {
-  setLang(curLang === \'it\' ? \'en\' : \'it\');
+document.getElementById('langBtn').addEventListener('click', function() {
+  setLang(curLang === 'it' ? 'en' : 'it');
 });
 
 (function() {
-  try { var v = localStorage.getItem(\'lt_ck\'); if (v===\'1\') gtag(\'consent\',\'update\',{analytics_storage:\'granted\'}); } catch(e) {}
+  try { var v = localStorage.getItem('lt_ck'); if (v==='1') gtag('consent','update',{analytics_storage:'granted'}); } catch(e) {}
 })();
 
-gtag(\'event\',\'pricing_page_view\',{ event_category:\'pricing_funnel\', language:curLang, referrer:document.referrer||\'direct\' });
+gtag('event','pricing_page_view',{ event_category:'pricing_funnel', language:curLang, referrer:document.referrer||'direct' });
 
-var mainCta = document.getElementById(\'main-cta\');
+var mainCta = document.getElementById('main-cta');
 if (mainCta) {
-  mainCta.addEventListener(\'click\', function() {
-    gtag(\'event\',\'pricing_tally_start_click\',{
-      event_category:\'pricing_funnel\', price_shown:\'139\',
-      cta_text:(this.textContent||\'\').trim(),
-      page_path:window.location.pathname, language:curLang, transport_type:\'beacon\'
+  mainCta.addEventListener('click', function() {
+    gtag('event','pricing_tally_start_click',{
+      event_category:'pricing_funnel', price_shown:'139',
+      cta_text:(this.textContent||'').trim(),
+      page_path:window.location.pathname, language:curLang, transport_type:'beacon'
     });
   });
 }
 
 (function() {
   var done = {};
-  window.addEventListener(\'scroll\', function() {
+  window.addEventListener('scroll', function() {
     var pct = Math.round(((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight) * 100);
     [25,50,75,100].forEach(function(m) {
-      if (pct >= m && !done[m]) { done[m]=true; gtag(\'event\',\'pricing_scroll_depth\',{event_category:\'pricing_engagement\',depth_percent:m}); }
+      if (pct >= m && !done[m]) { done[m]=true; gtag('event','pricing_scroll_depth',{event_category:'pricing_engagement',depth_percent:m}); }
     });
   }, { passive:true });
 })();
 
 [15,30,60,120].forEach(function(s) {
-  setTimeout(function() { gtag(\'event\',\'pricing_time_on_page\',{event_category:\'pricing_engagement\',seconds:s}); }, s*1000);
+  setTimeout(function() { gtag('event','pricing_time_on_page',{event_category:'pricing_engagement',seconds:s}); }, s*1000);
 });
 
 (function() {
-  var el = document.querySelector(\'.guarantee\');
-  if (!el || !(\'IntersectionObserver\' in window)) return;
+  var el = document.querySelector('.guarantee');
+  if (!el || !('IntersectionObserver' in window)) return;
   var obs = new IntersectionObserver(function(entries) {
-    if (entries[0].isIntersecting) { gtag(\'event\',\'pricing_guarantee_visible\',{event_category:\'pricing_engagement\'}); obs.disconnect(); }
+    if (entries[0].isIntersecting) { gtag('event','pricing_guarantee_visible',{event_category:'pricing_engagement'}); obs.disconnect(); }
   }, { threshold:0.5 });
   obs.observe(el);
 })();
 
-document.querySelectorAll(\'.minifaq-btn\').forEach(function(btn) {
-  btn.addEventListener(\'click\', function() {
-    var item = this.closest(\'.minifaq-item\');
-    var isOpen = item.classList.contains(\'open\');
-    document.querySelectorAll(\'.minifaq-item\').forEach(function(i) {
-      i.classList.remove(\'open\');
-      i.querySelector(\'.minifaq-btn\').setAttribute(\'aria-expanded\',\'false\');
+document.querySelectorAll('.minifaq-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = this.closest('.minifaq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.minifaq-item').forEach(function(i) {
+      i.classList.remove('open');
+      i.querySelector('.minifaq-btn').setAttribute('aria-expanded','false');
     });
     if (!isOpen) {
-      item.classList.add(\'open\');
-      this.setAttribute(\'aria-expanded\',\'true\');
-      gtag(\'event\',\'pricing_faq_open\',{
-        event_category:\'pricing_engagement\',
-        faq_key: btn.querySelector(\'[data-k]\') ? btn.querySelector(\'[data-k]\').getAttribute(\'data-k\') : \'\'
+      item.classList.add('open');
+      this.setAttribute('aria-expanded','true');
+      gtag('event','pricing_faq_open',{
+        event_category:'pricing_engagement',
+        faq_key: btn.querySelector('[data-k]') ? btn.querySelector('[data-k]').getAttribute('data-k') : ''
       });
     }
   });
