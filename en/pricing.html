@@ -35,6 +35,9 @@
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wb0066oo4n");
   </script>
+  <script>
+    window.clarity && window.clarity('set', 'page_type', 'pricing');
+  </script>
 
   <link rel="icon" href="https://www.leantil.com/leantil-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -344,13 +347,50 @@
     @media (prefers-reduced-motion:reduce) {
       *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; }
     }
+
+    /* ── EXIT INTENT TOAST ── */
+    #exit-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);z-index:9999;width:calc(100% - 40px);max-width:680px;background:#1A1A1E;border:1px solid var(--bd2);border-radius:16px;padding:18px 20px 18px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 8px 48px rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:transform .35s cubic-bezier(.22,1,.36,1),opacity .3s ease;}
+    #exit-toast.visible{transform:translateX(-50%) translateY(0);opacity:1;pointer-events:all;}
+    .exit-toast-accent{width:3px;height:40px;border-radius:99px;background:var(--grad);flex-shrink:0;}
+    .exit-toast-body{flex:1;min-width:0;}
+    .exit-toast-body strong{display:block;font-size:14px;font-weight:700;color:var(--tx);margin-bottom:3px;line-height:1.3;}
+    .exit-toast-body span{font-size:13px;color:var(--muted);line-height:1.5;}
+    .exit-toast-actions{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+    .exit-toast-cta{display:inline-flex;align-items:center;background:var(--grad);color:#fff;font-family:var(--f);font-size:13.5px;font-weight:700;padding:9px 20px;border-radius:100px;border:none;cursor:pointer;box-shadow:0 0 18px var(--glow);transition:box-shadow .2s,transform .15s;text-decoration:none;white-space:nowrap;}
+    .exit-toast-cta:hover{transform:translateY(-1px);box-shadow:0 4px 28px var(--glow);}
+    .exit-toast-close{background:none;border:none;color:var(--dim);font-size:18px;cursor:pointer;line-height:1;font-family:var(--f);transition:color .15s;padding:4px;flex-shrink:0;}
+    .exit-toast-close:hover{color:var(--tx);}
+    @media(max-width:540px){#exit-toast{flex-direction:column;align-items:flex-start;gap:12px;padding:16px;}.exit-toast-accent{width:32px;height:3px;}.exit-toast-actions{width:100%;}.exit-toast-cta{flex:1;justify-content:center;}}
   </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Product","name":"LeanTil",
+   "description":"Cuscino intelligente per la postura che rileva in tempo reale la distribuzione del peso sulla seduta.",
+   "brand":{"@type":"Brand","name":"LeanTil"},
+   "url":"https://www.leantil.com/pricing.html","image":"https://www.leantil.com/render.png",
+   "offers":{"@type":"Offer","url":"https://www.leantil.com/pricing.html","priceCurrency":"EUR",
+     "price":"139","priceValidUntil":"2026-08-31",
+     "availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition",
+     "seller":{"@type":"Organization","name":"LeanTil"}}}
+  </script>
 </head>
 <body>
 
+<!-- EXIT INTENT TOAST -->
+<div id="exit-toast" role="dialog" aria-modal="true" aria-labelledby="exit-toast-title">
+  <div class="exit-toast-accent" aria-hidden="true"></div>
+  <div class="exit-toast-body">
+    <strong id="exit-toast-title" data-k="exit_h">Aspetta, i posti early adopter si stanno esaurendo</strong>
+    <span data-k="exit_p">Lascia la mail e blocchi il prezzo &euro;139 prima che torni a &euro;159.</span>
+  </div>
+  <div class="exit-toast-actions">
+    <a href="https://tally.so/r/jaMJGx" target="_blank" rel="noopener" class="exit-toast-cta" id="exit-cta" data-k="exit_cta">Blocca il prezzo</a>
+    <button class="exit-toast-close" id="exit-x" aria-label="Chiudi">&#215;</button>
+  </div>
+</div>
+
 <header id="hdr">
   <div class="hdr-row">
-    <a href="https://www.leantil.com/en/" class="logo" aria-label="LeanTil home">
+    <a href="../" class="logo" aria-label="LeanTil home">
       <img src="https://www.leantil.com/LeanTil_white_logo.png" alt="LeanTil" width="120" height="40" />
     </a>
     <div class="hdr-r">
@@ -412,7 +452,7 @@
           <p class="price-note"><strong data-k="price_note_strong">Prezzo early adopter</strong>, <span data-k="price_note_rest">riservato ai primi ordini.</span></p>
         </div>
         <div class="card-top-visual">
-          <img src="/render.png" alt="LeanTil, cuscino intelligente per la postura" width="180" height="180" loading="eager" />
+          <img src="../render.png" alt="LeanTil, cuscino intelligente per la postura" width="180" height="180" loading="eager" />
         </div>
       </div>
 
@@ -439,26 +479,21 @@
           </li>
         </ul>
 
+        <div class="guarantee" style="margin-bottom:16px;">
+          <div class="guarantee-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="guarantee-text">
+            <h4 data-k="guar_title">Garanzia soddisfatti o rimborsati</h4>
+            <p data-k="guar_desc">Se LeanTil non soddisfa le tue aspettative, ti rimborsiamo, senza procedure complicate.</p>
+          </div>
+        </div>
         <div class="no-charge-notice">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <p data-k="no_charge">Nessun addebito immediato. Ti contatteremo per confermare i dettagli di pagamento.</p>
+          <p data-k="no_charge">Prenota ora il tuo posto. Il pagamento avviene solo alla conferma della spedizione.</p>
         </div>
-
-        <a href="https://tally.so/r/ODYbga" target="_blank" rel="noopener" class="cta-btn" id="main-cta">
+        <a href="https://tally.so/r/ODYbga" target="_self" class="cta-btn" id="main-cta">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           <span data-k="cta_text">Prenota il tuo posto</span>
         </a>
-      </div>
-    </div>
-
-    <!-- GARANZIA -->
-    <div class="guarantee">
-      <div class="guarantee-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <div class="guarantee-text">
-        <h4 data-k="guar_title">Garanzia soddisfatti o rimborsati</h4>
-        <p data-k="guar_desc">Se LeanTil non soddisfa le tue aspettative, ti rimborsiamo, senza procedure complicate.</p>
       </div>
     </div>
 
@@ -535,7 +570,7 @@ var C = {
     inc3b:' - se non ti convince, ti rimborsiamo.',
     inc4:'Accesso diretto ai founder',
     inc4b:' - puoi scriverci per qualsiasi cosa.',
-    no_charge:'Nessun addebito immediato. Ti contatteremo per confermare i dettagli di pagamento.',
+    no_charge:'Prenota ora il tuo posto. Il pagamento avviene solo alla conferma della spedizione.',
     cta_text:'Prenota il tuo posto',
     guar_title:'Garanzia soddisfatti o rimborsati',
     guar_desc:'Se LeanTil non soddisfa le tue aspettative, ti rimborsiamo, senza procedure complicate.',
@@ -548,6 +583,9 @@ var C = {
     fa3:'Sì. LeanTil è compatibile con sedie da ufficio, gaming e domestiche, senza nessuna modifica alla tua postazione.',
     fq4:'Non mi basta una sedia ergonomica?',
     fa4:'Una sedia ergonomica migliora il comfort, ma non cambia come ti siedi tu. Non ti avvisa quando scivoli in avanti, non monitora la tua postura nel tempo. LeanTil agisce sul comportamento, non sul mobilio.',
+    exit_h:'Aspetta, i posti early adopter si stanno esaurendo',
+    exit_p:'Lascia la mail e blocchi il prezzo €139 prima che torni a €159.',
+    exit_cta:'Blocca il prezzo',
     foot_note:'Hai domande? Scrivici a <a href="mailto:info@leantil.com">info@leantil.com</a>: rispondiamo entro 48h. &nbsp;|&nbsp; <a href="https://www.leantil.com/privacy.html">Privacy Policy</a>'
   },
   en: {
@@ -590,6 +628,9 @@ var C = {
     fa3:'Yes. LeanTil is compatible with office, gaming, and home chairs, with no modifications to your setup.',
     fq4:"Isn't an ergonomic chair enough?",
     fa4:"An ergonomic chair improves comfort, but it doesn't change how you sit. It won't alert you when you're slouching forward, and it doesn't track your posture over time. LeanTil works on your behavior, not your furniture.",
+    exit_h:'Wait, early adopter spots are running out',
+    exit_p:'Leave your email and lock in the €139 price before it goes back to €159.',
+    exit_cta:'Lock in the price',
     foot_note:'Questions? Write to <a href="mailto:info@leantil.com">info@leantil.com</a>: we reply within 48h. &nbsp;|&nbsp; <a href="https://www.leantil.com/privacy.html">Privacy Policy</a>'
   }
 };
@@ -608,7 +649,7 @@ function setLang(l) {
 }
 
 document.getElementById('langBtn').addEventListener('click', function() {
-  setLang(curLang === 'it' ? 'en' : 'it');
+  window.location.href = '../pricing.html';
 });
 
 (function() {
@@ -685,6 +726,20 @@ window._linkedin_data_partner_ids.push(_linkedin_partner_id);
   b.type = "text/javascript";b.async = true;
   b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
   s.parentNode.insertBefore(b, s);})(window.lintrk);
+
+/* ══ EXIT INTENT TOAST ══ */
+(function() {
+  var toast=document.getElementById('exit-toast'),exitX=document.getElementById('exit-x'),exitCta=document.getElementById('exit-cta'),shown=false;
+  try{if(sessionStorage.getItem('lt_exit_pricing'))shown=true;}catch(e){}
+  function showExit(){if(shown)return;shown=true;try{sessionStorage.setItem('lt_exit_pricing','1');}catch(e){}if(typeof gtag==='function')gtag('event','exit_intent_shown',{event_category:'pricing_engagement'});toast.classList.add('visible');setTimeout(function(){exitX.focus();},50);}
+  function closeExit(r){toast.classList.remove('visible');if(typeof gtag==='function')gtag('event','exit_intent_dismiss',{event_category:'pricing_engagement',reason:r||'close'});}
+  exitX.addEventListener('click',function(){closeExit('x');});
+  exitCta.addEventListener('click',function(){if(typeof gtag==='function')gtag('event','exit_intent_cta_click',{event_category:'pricing_engagement'});});
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&toast.classList.contains('visible'))closeExit('escape');});
+  document.addEventListener('mouseleave',function(e){if(e.clientY<=20)showExit();});
+  var lastY=window.scrollY;
+  window.addEventListener('scroll',function(){var y=window.scrollY;if(lastY-y>80&&y>300)showExit();lastY=y;},{passive:true});
+})();
 
 /* Auto-set language */
 document.addEventListener('DOMContentLoaded', function() { setLang('en'); });
