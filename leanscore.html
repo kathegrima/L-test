@@ -717,10 +717,20 @@ function submitQuiz() {
   // Send to Apps Script (fire and forget)
   fetch(APPS_SCRIPT_URL, {
     method: 'POST',
-    mode:   'no-cors',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ mode, timestamp: new Date().toISOString(), answers, score: scoreData })
-  }).catch(() => {});
+    headers: {
+      'Content-Type': 'text/plain'
+    },
+    body: JSON.stringify({
+      mode,
+      page: window.location.pathname,
+      timestamp: new Date().toISOString(),
+      answers,
+      score: scoreData
+    })
+  })
+  .then(r => r.text())
+  .then(console.log)
+  .catch(console.error);
 
   setTimeout(() => {
     document.getElementById('loadingCard').classList.remove('active');
