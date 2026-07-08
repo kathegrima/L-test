@@ -534,9 +534,14 @@ function buildCard(idx) {
   }
 
   const isLast = idx === questions.length - 1;
+  // Bottone "Avanti" solo per domande che richiedono input manuale (testo, select, form).
+  // Le domande a opzioni usano l'auto-advance al click: il bottone sarebbe ridondante e confonde.
+  const needsNextBtn = q.type !== 'options';
   html += `<div class="q-nav">
     <button class="btn-back" id="btnBack"${idx === 0 ? ' disabled' : ''}>Indietro</button>
-    <button class="btn-next" id="btnNext">${isLast ? 'Calcola il mio LeanScore' : 'Avanti'}</button>
+    ${needsNextBtn
+      ? `<button class="btn-next" id="btnNext">${isLast ? 'Calcola il mio LeanScore' : 'Avanti'}</button>`
+      : '<span></span>'}
   </div>`;
 
   card.innerHTML = html;
@@ -592,7 +597,7 @@ function buildCard(idx) {
   }
 
   card.querySelector('#btnBack').addEventListener('click', goBack);
-  card.querySelector('#btnNext').addEventListener('click', goNext);
+  card.querySelector('#btnNext')?.addEventListener('click', goNext);
 
   return card;
 }
