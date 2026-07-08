@@ -363,8 +363,7 @@
 
 <script>
 /* ── CONFIG ── */
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2YT2idWQfbGUfvuE7hSUwnZLrot8BceuroTwc50o2uAnOxp3TCQREqql9LXdVpLwB/exec';
-
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxqUp5PSeeTQcROvQUbFwpgTKdezURocACRlxzmDuUkCC1Pp-tDpFC4MTnmBvuF4Aeb/exec';
 
 /* ── QUESTIONS ── */
 const Q_B2B = [
@@ -712,9 +711,11 @@ function submitQuiz() {
     page:            window.location.href
   };
 
+  // Content-Type: text/plain evita il preflight CORS (che Apps Script non gestisce)
+  // Il body e ancora JSON valido e JSON.parse funziona lato Apps Script
   fetch(APPS_SCRIPT_URL, {
     method: 'POST', mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'text/plain' },
     body: JSON.stringify(payload)
   }).catch(() => {});
 
