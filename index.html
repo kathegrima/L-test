@@ -514,8 +514,11 @@
     /* ── FOUNDER STRIP ── */
     .founder-strip { padding:0 0 72px; }
     .founder-strip-title {
-      font-size:13px; font-weight:600; color:var(--dim);
-      letter-spacing:.08em; text-transform:uppercase; margin-bottom:20px; text-align:center;
+      margin-bottom:20px; text-align:center;
+    }
+    .founder-strip-title h2 {
+      font-size:clamp(26px,4vw,44px); font-weight:800;
+      letter-spacing:-.02em; color:var(--tx);
     }
     .founders-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
     .founder-card-single {
