@@ -379,9 +379,7 @@ const Q_B2B = [
   { id:'b2b_giorni_malattia', batch:'Il tuo team', text:'Quanti giorni di malattia/anno stimate dovuti a mal di schiena o dolori muscolo-scheletrici?',
     sub:'Se non hai il dato, usa la media di settore (8 giorni/anno per dipendente, fonte INAIL).', type:'options', required:true,
     options:[{value:'8',label:'Non lo so, usa la media INAIL (8 gg)',score:8},{value:'3',label:'Meno di 5 giorni',score:3},{value:'6',label:'5-8 giorni',score:6},{value:'10',label:'9-14 giorni',score:10},{value:'18',label:'Piu di 14 giorni',score:18}] },
-  { id:'b2b_costo_orario', batch:'Il tuo team', text:'Qual e il costo orario lordo medio per dipendente?',
-    sub:'Serve per tradurre i giorni persi in euro. Puoi usare la stima di settore.', type:'options', required:true,
-    options:[{value:'18',label:'Non lo so, usa la stima (18 euro/h)',score:18},{value:'15',label:'Meno di 15 euro/h',score:15},{value:'22',label:'15-25 euro/h',score:22},{value:'35',label:'25-40 euro/h',score:35},{value:'55',label:'Piu di 40 euro/h',score:55}] },
+  
   { id:'b2b_welfare', batch:'Situazione attuale', text:'Avete gia un piano welfare attivo?', type:'options', required:true,
     options:[{value:'strutturato',label:'Si, strutturato e misurato'},{value:'generico',label:'Si, ma generico / poco monitorato'},{value:'no',label:'No, non ancora'}] },
   { id:'b2b_contact', batch:'Invia il tuo report', text:'Dove vuoi ricevere il tuo report LeanScore?',
@@ -427,7 +425,7 @@ function switchMode(m) {
   const t = document.getElementById('startTitle');
   const d = document.getElementById('startDesc');
   if (t) t.textContent = m === 'b2b' ? 'Quanto costa al tuo team una postura scorretta?' : 'Scopri il tuo indice di rischio posturale';
-  if (d) d.textContent = m === 'b2b' ? 'Rispondi a 9 domande veloci. Ricevi subito il costo nascosto stimato.' : 'Rispondi a 7 domande veloci. Ricevi il tuo LeanScore e 3 consigli personalizzati.';
+  if (d) d.textContent = m === 'b2b' ? 'Rispondi a 8 domande veloci. Ricevi subito il costo nascosto stimato.' : 'Rispondi a 7 domande veloci. Ricevi il tuo LeanScore e 3 consigli personalizzati.';
 }
 
 /* ── START SCREEN ── */
